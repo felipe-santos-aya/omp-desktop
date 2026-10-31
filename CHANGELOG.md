@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Evidence now opens on business-goal proof cards with expected/observed findings, criterion coverage, visible gaps and next actions. Screenshots enlarge and compare side by side; recordings play and scrub; nonvisual output is readable without opening technical logs. Capture, reported checks, freshness and explicit user review stay separate. Retire and Waive are explained as **Remove from scope** and **Accept exception**, with reasons and preserved history.
 - The Desktop-wide auto-compaction switch is replaced by native profile policy controls. The obsolete Desktop preference is removed; it no longer overrides omp's profile settings. Existing native configuration is not rewritten automatically.
 - The minimap uses brighter user markers and circular assistant cells to distinguish them from square tool cells, even when their colors match. The single-row legend has a multicolor tool swatch; hover or focus it for every tool/event color, including eval, without adding permanent labels.
 - Live conversation uses a speech-bubble-and-waveform icon rather than a recording symbol, distinct from the dictation microphone.
@@ -33,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- Evidence no longer treats unfetched references or output-less executions as behavioral proof. CI capture preserves findings and explicit review requests. Known media failures propagate across inspector panels, Refresh retries failed previews, modal navigation cannot trigger background shortcuts, and rejected proof stays an explicit gap when only weaker observations remain.
 - Conversation History now lists saved sessions across all configured profiles, with visible, searchable profile labels. Resume uses the conversation's original profile and working folder, or focuses its existing tab, without requiring a top-bar profile switch.
 - Saving a conversation compaction target no longer reports failure when a native settings reload races its post-save confirmation. Only the read is retried; the saved write is not replayed.
 - Browser launch now creates its own initial blank page before exposing CDP, avoiding duplicate pages when Chromium's automatic startup races panel discovery.
